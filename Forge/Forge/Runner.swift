@@ -133,12 +133,12 @@ public class Runner {
     autoreleasepool {
       let commandBuffer = commandQueue.makeCommandBuffer()
 
-      network.encode(commandBuffer: commandBuffer, texture: inputTexture, inflightIndex: inflightIndex)
+        network.encode(commandBuffer: commandBuffer!, texture: inputTexture, inflightIndex: inflightIndex)
 
       // The completion handler for the command buffer is called on some
       // background thread. This may be the same thread that encoded the
       // GPU commands (if not waiting on the semaphore), or another one.
-      commandBuffer.addCompletedHandler { [inflightIndex] commandBuffer in
+        commandBuffer?.addCompletedHandler { [inflightIndex] commandBuffer in
 
         var result = network.fetchResult(inflightIndex: inflightIndex)
         result.latency = CACurrentMediaTime() - startTime
@@ -153,7 +153,7 @@ public class Runner {
       }
 
       inflightIndex = (inflightIndex + 1) % inflightBuffers
-      commandBuffer.commit()
+        commandBuffer?.commit()
     }
   }
 }
