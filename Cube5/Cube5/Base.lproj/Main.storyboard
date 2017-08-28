@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cube5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVW-cB-nrW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNt-t0-lxi">
+                                <rect key="frame" x="163" y="591" width="49" height="48"/>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="chooseObject:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZM8-kM-7qE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OVW-cB-nrW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="BT8-xg-p1Z"/>
+                            <constraint firstItem="OVW-cB-nrW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EgF-Ph-bx5"/>
+                            <constraint firstItem="OVW-cB-nrW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GnD-Nf-SbK"/>
+                            <constraint firstItem="vNt-t0-lxi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="571" id="LHw-xs-rRi"/>
+                            <constraint firstItem="vNt-t0-lxi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="Pat-z0-htp"/>
+                            <constraint firstItem="OVW-cB-nrW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Skt-Dd-Y3g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vNt-t0-lxi" secondAttribute="trailing" constant="163" id="jSR-I5-iYh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="vNt-t0-lxi" id="twZ-El-WuS"/>
+                        <outlet property="arscnView" destination="OVW-cB-nrW" id="mc7-il-OFX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="70.614692653673174"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add" width="48" height="48"/>
+    </resources>
+</document>
